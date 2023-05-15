@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda">
+
+    <title>Boggle!</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Boggle!</h1>
+        <div id="options-container">
+            <p class="options instructions">Choose a grid size and then press start when you're ready!</p>
+            <form id="options-form">
+                <label class="options" for="board5">5x5:
+                    <input type="radio" name="board-size" class="board-size options" value="5" id="board5">
+                </label>
+                <label class='options' for="board6">6x6:
+                    <input type="radio" name="board-size" class="board-size options" value="6" id="board6">
+                </label>
+                <label class='options' for="board7">7x7:
+                    <input type="radio" name="board-size" class="board-size options" value="7" id="board7">
+                </label>
+                <button id="start" value="start" class="options">Start Game</button>
+            </form>
+        </div>
+
+
+        <div id="timer" class="hide-game"> Time Left
+            <div id="seconds"></div>
+        </div>
+        <div id="score" class="hide-game">Score</div>
+        <div id="word-bank" class="hide-game">
+            Words Found
+            <ul></ul>
+        </div>
+        <div id="letter-container" class="hide-game hide-game"></div>
+
+        <form id="form" method="POST" autofocus class="hide-game">
+            <input name="word" class="word" type="text">
+            <button>Check word</button>
+        </form>
+        <p id="result" class="hide-game"></p>
+
+
+        <button id="play-again" hidden>Play again</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
